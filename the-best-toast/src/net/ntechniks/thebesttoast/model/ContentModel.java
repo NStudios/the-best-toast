@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.example.thebesttoast.model;
+package net.ntechniks.thebesttoast.model;
 
 import android.graphics.Bitmap;
 
