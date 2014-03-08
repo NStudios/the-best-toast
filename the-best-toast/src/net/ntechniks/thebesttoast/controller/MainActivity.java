@@ -3,23 +3,25 @@ package net.ntechniks.thebesttoast.controller;
 import net.ntechniks.thebesttoast.R;
 import net.ntechniks.thebesttoast.model.ContentModel;
 import net.ntechniks.thebesttoast.service.WikiStarter;
-import net.ntechniks.thebesttoast.service.WikiStarter.ShowModelContent;
 import net.ntechniks.thebesttoast.service.WikiStarter.WikiLanguage;
+import net.ntechniks.thebesttoast.service.interfaces.IShowModelContent;
 import net.ntechniks.thebesttoast.view.ContentFragment;
+import net.ntechniks.thebesttoast.view.ContentFragment.OnGoButtonListener;
 import net.ntechniks.thebesttoast.view.MainScreen;
 import net.ntechniks.thebesttoast.view.ResultScreen;
+import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.AsyncTask.Status;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.ShareActionProvider;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity implements ShowModelContent {
+public class MainActivity extends Activity implements IShowModelContent,
+		OnGoButtonListener {
 
 	private ShareActionProvider sap;
 	private ContentModel contentModel;
@@ -84,7 +86,7 @@ public class MainActivity extends ActionBarActivity implements ShowModelContent 
 	 */
 	private void replaceFragment(ContentFragment newFragment) {
 		// update the main content by replacing fragments
-		FragmentManager fragmentManager = getSupportFragmentManager();
+		FragmentManager fragmentManager = this.getFragmentManager();
 		Bundle args = new Bundle();
 		int position = 0;
 
@@ -146,26 +148,22 @@ public class MainActivity extends ActionBarActivity implements ShowModelContent 
 	public void goButtonClicked() {
 		AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
 			WikiStarter service = new WikiStarter();
+
 			@Override
 			protected Void doInBackground(Void... params) {
 				contentModel = service.getRandomPageTextX(WikiLanguage.english);
 				return null;
 			}
 		};
-		
-		Status status = task.getStatus();
-		boolean isRunning = status.equals(AsyncTask.Status.RUNNING);
-		
-		if (isRunning) {
-			ContentFragment newFragment = new ResultScreen();
-			replaceFragment(newFragment);
-		}
+
+		ContentFragment newFragment = new ResultScreen();
+		replaceFragment(newFragment);
 	}
 
 	public void goShowMoreInfo() {
-		
+
 	}
-	
+
 	@Override
 	public void showModelContent() {
 		((ResultScreen) fragment).updateContent();
