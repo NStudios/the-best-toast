@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/aboutPerantView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".AboutActivity" >
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/aboutAdView"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:id="@+id/container_about1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/container_about2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/about_mid_header1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_family"
+                    android:text="@string/app_name"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_about3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/container_about2"
+                android:layout_margin="5dp"
+                android:background="@color/blue_light"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/about_mid_header2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_family"
+                    android:text="@string/about_mid_header2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:id="@+id/textScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="NestedScrolling" >
+
+                    <TextView
+                        android:id="@+id/about_whats_new_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_example"
+                        android:textColor="@color/blue" />
+                </ScrollView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/container_about4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/container_about3"
+                android:layout_margin="5dp"
+                android:background="@color/blue_light"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/about_min_header3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@string/font_family"
+                    android:text="@string/about_mid_header3"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/developer_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/about_min_header3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/developer_label"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#ff9200" />
+
+                <CheckedTextView
+                    android:id="@+id/developer_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/developer_label"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/about_min_header3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/developer_label"
+                    android:clickable="true"
+                    android:fontFamily="@string/font_family"
+                    android:linksClickable="true"
+                    android:text="@string/developer"
+                    android:textColor="#ff5a00"
+                    android:textStyle="bold" />
+
+                <CheckedTextView
+                    android:id="@+id/RateUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/developer_link"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:fontFamily="@string/font_family"
+                    android:linksClickable="true"
+                    android:text="@string/rate_us"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ff2d00"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/RateUs"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5" />
+
+                <LinearLayout
+                    android:id="@+id/contactMeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingBar"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/envelope"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@android:drawable/ic_dialog_email" />
+
+                    <CheckedTextView
+                        android:id="@+id/contactMe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="2dp"
+                        android:clickable="true"
+                        android:fontFamily="@string/font_family"
+                        android:linksClickable="true"
+                        android:text="@string/contact_me"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#ff9200" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/madeInText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/font_family"
+                    android:text="@string/made_in_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/blue" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/aboutAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
