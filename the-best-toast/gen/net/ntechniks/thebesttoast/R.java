@@ -10,6 +10,10 @@ package net.ntechniks.thebesttoast;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int blue=0x7f050000;
+        public static final int blue_light=0x7f050001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -17,30 +21,133 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
-        public static final int imageView1=0x7f080002;
-        public static final int textView1=0x7f080000;
-        public static final int textView2=0x7f080001;
-        public static final int textView3=0x7f080003;
+        public static final int RateUs=0x7f0a000e;
+        public static final int aboutAdView=0x7f0a0002;
+        public static final int aboutPerantView=0x7f0a0000;
+        public static final int about_action_exit=0x7f0a0022;
+        public static final int about_action_share=0x7f0a0021;
+        public static final int about_mid_header1=0x7f0a0005;
+        public static final int about_mid_header2=0x7f0a0007;
+        public static final int about_mid_header4=0x7f0a0016;
+        public static final int about_min_header3=0x7f0a000b;
+        public static final int about_whats_new_text=0x7f0a0009;
+        public static final int adView=0x7f0a001b;
+        public static final int contactMe=0x7f0a0012;
+        public static final int contactMeContainer=0x7f0a0010;
+        public static final int container_about1=0x7f0a0003;
+        public static final int container_about2=0x7f0a0004;
+        public static final int container_about3=0x7f0a0006;
+        public static final int container_about4=0x7f0a000a;
+        public static final int container_about5=0x7f0a0014;
+        public static final int container_about6=0x7f0a0015;
+        public static final int content_frame=0x7f0a0019;
+        public static final int developer_label=0x7f0a000c;
+        public static final int developer_link=0x7f0a000d;
+        public static final int envelope=0x7f0a0011;
+        public static final int goButton=0x7f0a001a;
+        public static final int imageView=0x7f0a001e;
+        public static final int infoDescription=0x7f0a001f;
+        public static final int infoHeader=0x7f0a001c;
+        public static final int infoTitle=0x7f0a001d;
+        public static final int madeInText=0x7f0a0013;
+        public static final int mainContainer=0x7f0a0018;
+        public static final int main_action_about=0x7f0a0025;
+        public static final int main_action_exit=0x7f0a0026;
+        public static final int main_action_more_apps=0x7f0a0024;
+        public static final int main_action_share=0x7f0a0023;
+        public static final int moreInfoButtom=0x7f0a0020;
+        public static final int ratingBar=0x7f0a000f;
+        public static final int scroller=0x7f0a0001;
+        public static final int textScrollView=0x7f0a0008;
+        public static final int webView=0x7f0a0017;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int info_screen=0x7f030001;
+        public static final int activity_about=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int main_screen=0x7f030002;
+        public static final int result_screen=0x7f030003;
     }
     public static final class menu {
-        public static final int main_action_menu=0x7f070000;
+        public static final int about_action_menu=0x7f090000;
+        public static final int main_action_menu=0x7f090001;
+    }
+    public static final class raw {
+        public static final int version_history=0x7f040000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
+        /**   
+         */
+        public static final int about_mid_header2=0x7f070009;
+        /**   
+         */
+        public static final int about_mid_header3=0x7f07000b;
+        /**   
+         */
+        public static final int action_exit=0x7f070015;
+        /**   
+         */
+        public static final int action_share_this_app=0x7f070014;
+        /**   
+         */
+        public static final int app_name=0x7f070000;
+        /**   
+         */
+        public static final int contact_me=0x7f07000f;
+        /**   
+         */
+        public static final int developer=0x7f07000d;
+        /**   
+         */
+        public static final int developer_label=0x7f07000c;
+        /**   
+         */
+        public static final int font_family=0x7f070008;
+        /**   
+         */
+        public static final int goButton=0x7f070004;
+        /**   
+         */
+        public static final int infoHeader=0x7f070006;
+        /**   
+         */
+        public static final int info_title=0x7f070007;
+        /**   
+         */
+        public static final int made_in_text=0x7f070012;
+        /**   
+         */
+        public static final int main_about=0x7f070002;
+        /**   
+         */
+        public static final int main_exit=0x7f070003;
+        /**   
+         */
+        public static final int more_apps=0x7f070001;
+        /**   
+         */
+        public static final int more_info_button=0x7f070005;
+        /**   
+         */
+        public static final int no_google_play=0x7f070011;
+        /**   
+         */
+        public static final int no_info=0x7f070010;
+        /**   
+         */
+        public static final int number_example=0x7f07000a;
+        /**   
+         */
+        public static final int other_apps=0x7f070013;
+        /**   
+         */
+        public static final int rate_us=0x7f07000e;
     }
     public static final class style {
         /** 
@@ -64,10 +171,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f080001;
     }
 }
